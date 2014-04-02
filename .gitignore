@@ -1,0 +1,7 @@
+local_settings.py
+*.sqlite3
+*.db
+staticfiles/
+*.log
+*.pot
+*.pyc

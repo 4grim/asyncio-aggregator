@@ -1,0 +1,96 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+
+	<title>Asyncio</title>
+
+	<link rel="stylesheet" href="{% static 'content_submit/css/foundation.css' %}" />
+	<link rel="stylesheet" href="{% static 'content_submit/css/style.css' %}" />
+	<script src="{% static 'content_submit/js/vendor/modernizr.js' %}"></script>
+
+	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+ 
+	{% block header_block %}
+	{% endblock %}
+</head>
+<body>
+	<nav>
+		<a data-reveal-id="submit-source" href="#">Submit a Link</a> &middot;
+		<a href="mailto:amber.grimaldi@gmail.com?subject=Hi There!">Contact</a> &middot;
+		<a href="https://github.com/4grim/asyncio-aggregator">Github</a>
+	</nav>
+	<div class="main">
+		<div class="main-head text-center">
+			<h1>Python Async IO Resources</h1>
+			<p>A curated list of stuff from around the net to get you started with <a href="https://docs.python.org/3.4/library/asyncio.html">asyncio</a></p>
+
+			<div class="row">
+				<div data-magellan-expedition="fixed" class="resource-nav text-center">
+					<dl class="sub-nav large show-for-large-up">
+						<dd data-magellan-arrival="libraries"><a href="#libraries">Libraries</a></dd>
+						<dd data-magellan-arrival="docs"><a href="#docs">Docs</a></dd>
+						<dd data-magellan-arrival="talks"><a href="#talks">Talks</a></dd>
+						<dd data-magellan-arrival="tutorials"><a href="#tutorials">Tutorials</a></dd>
+						<dd data-magellan-arrival="blogs"><a href="#blogs">Blogs</a></dd>
+					</dl>
+
+					<dl class="sub-nav medium show-for-medium-only">
+						<dd data-magellan-arrival="libraries"><a href="#libraries">Libraries</a></dd>
+						<dd data-magellan-arrival="docs"><a href="#docs">Docs</a></dd>
+						<dd data-magellan-arrival="talks"><a href="#talks">Talks</a></dd>
+						<dd data-magellan-arrival="tutorials"><a href="#tutorials">Tutorials</a></dd>
+						<dd data-magellan-arrival="blogs"><a href="#blogs">Blogs</a></dd>
+					</dl>
+
+
+					<dl class="sub-nav small show-for-small-only">
+						<dd data-magellan-arrival="libraries"><a href="#libraries">Libraries</a></dd>
+						<dd data-magellan-arrival="docs"><a href="#docs">Docs</a></dd>
+						<dd data-magellan-arrival="talks"><a href="#talks">Talks</a></dd>
+						<dd data-magellan-arrival="tutorials"><a href="#tutorials">Tutorials</a></dd>
+						<dd data-magellan-arrival="blogs"><a href="#blogs">Blogs</a></dd>
+					</dl>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row main-content">
+
+		{% block body_block %}
+		{% endblock %}
+	</div>
+
+
+<!-- Modal for resource submission -->
+	<div id="submit-source" class="reveal-modal" data-reveal> 
+
+		<h5>Please complete the form below to submit your resource to be included.</h5>
+		<form action='' method="post">
+			<label>Name:</label><input type="text" name="name">
+			<label>Email:</label><input type="email" name="email">
+			<label>Link:</label><input type="url" name="link">
+			<label>Description:</label><textarea rows="4" cols="50"></textarea>
+			
+			<input type="submit" value="Submit">
+		</form>
+
+
+		<a class="close-reveal-modal">&#215;</a> 
+	</div>
+
+	<script src="{% static 'content_submit/js/vendor/jquery.js' %}"></script>
+    <!-- below imports all js libraries, can edit with only the essentials if needed and too slow -->
+    <script src="{% static 'content_submit/js/foundation.min.js' %}"></script>
+    <script src="{% static 'content_submit/js/foundation/foundation.equalizer.js' %}"></script>
+    <!-- <script src="{% static 'projects/js/foundation.magellan.js' %}"></script> -->
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+</html>

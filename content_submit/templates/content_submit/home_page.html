@@ -1,0 +1,119 @@
+{% extends 'content_submit/base.html' %}
+
+{% load staticfiles %}
+
+{% block body_block %}
+<div class="large-10 large-offset-1 columns content-data">	
+	<a name="libraries"></a>
+	<h3 data-magellan-destination="libraries" class="resource-type-title">Libraries</h3>
+	{% for resource in library_resources %}
+		{% if resource.image %}
+		<a href="{{ resource.link }}" alt="{{ resource.title }}"><div class="content-tile-image large-6 small-12 columns">
+			<img src="{{ resource.image.url }}" class="image"/>
+			<div class="content">
+				<h4>{{ resource.title }}</h4>
+				<a href="{{ resource.link }}">{{ resource.link }}</a>
+				<p>{{ resource.description}}<p>
+			</div>
+		</div></a>
+		{% else %}
+		<a href="{{ resource.link }}" alt="{{ resource.title }}"><div class="content-tile large-6 small-12 columns">
+			<h4>{{ resource.title }}</h4>
+			<a href="{{ resource.link }}">{{ resource.link }}</a>
+			<p>{{ resource.description}}<p>
+		</div></a>
+		{% endif %}
+	{% endfor %}
+
+
+	<a name="docs"></a>
+	<h3 data-magellan-destination="docs" class="resource-type-title">Docs</h3>
+	{% for resource in doc_resources %}
+		{% if resource.image %}
+		<a href="{{ resource.link }}" alt="{{ resource.title }}"><div class="content-tile-image large-6 small-12 columns">
+			<img src="{{ resource.image.url }}" class="image"/>
+			<div class="content">
+				<h4>{{ resource.title }}</h4>
+				<a href="{{ resource.link }}">{{ resource.link }}</a>
+				<p>{{ resource.description}}<p>
+			</div>
+		</div></a>
+		{% else %}
+		<a href="{{ resource.link }}" alt="{{ resource.title }}"><div class="content-tile large-6 small-12 columns">
+			<h4>{{ resource.title }}</h4>
+			<a href="{{ resource.link }}">{{ resource.link }}</a>
+			<p>{{ resource.description}}<p>
+		</div></a>
+		{% endif %}
+	{% endfor %}
+
+
+	<a name="talks"></a>
+	<h3 data-magellan-destination="talks" class="resource-type-title">Talks</h3>
+	{% for resource in talk_resources %}
+		{% if resource.image %}
+		<a href="{{ resource.link }}" alt="{{ resource.title }}"><div class="content-tile-image large-6 small-12 columns">
+			<img src="{{ resource.image.url }}" class="image"/>
+			<div class="content">
+				<h4>{{ resource.title }}</h4>
+				<a href="{{ resource.link }}">{{ resource.link }}</a>
+				<p>{{ resource.description}}<p>
+			</div>
+		</div></a>
+		{% else %}
+		<a href="{{ resource.link }}" alt="{{ resource.title }}"><div class="content-tile large-6 small-12 columns">
+			<h4>{{ resource.title }}</h4>
+			<a href="{{ resource.link }}">{{ resource.link }}</a>
+			<p>{{ resource.description}}<p>
+		</div></a>
+		{% endif %}
+	{% endfor %}
+
+
+	<a name="tutorials"></a>
+	<h3 data-magellan-destination="tutorials" class="resource-type-title">Tutorials</h3>
+	{% for resource in tutorial_resources %}
+		{% if resource.image %}
+		<a href="{{ resource.link }}" alt="{{ resource.title }}"><div class="content-tile-image large-6 small-12 columns">
+			<img src="{{ resource.image.url }}" class="image"/>
+			<div class="content">
+				<h4>{{ resource.title }}</h4>
+				<a href="{{ resource.link }}">{{ resource.link }}</a>
+				<p>{{ resource.description}}<p>
+			</div>
+		</div></a>
+		{% else %}
+		<a href="{{ resource.link }}" alt="{{ resource.title }}"><div class="content-tile large-6 small-12 columns">
+			<h4>{{ resource.title }}</h4>
+			<a href="{{ resource.link }}">{{ resource.link }}</a>
+			<p>{{ resource.description}}<p>
+		</div></a>
+		{% endif %}
+	{% endfor %}
+
+
+
+	<a name="blogs"></a>
+	<h3 data-magellan-destination="blogs" class="resource-type-title">Blog Posts</h3>
+	{% for resource in blog_resources %}
+		{% if resource.image %}
+		<a href="{{ resource.link }}" alt="{{ resource.title }}"><div class="content-tile-image large-6 small-12 columns">
+			<img src="{{ resource.image.url }}" class="image"/>
+			<div class="content">
+				<h4>{{ resource.title }}</h4>
+				<a href="{{ resource.link }}">{{ resource.link }}</a>
+				<p>{{ resource.description}}<p>
+			</div>
+		</div></a>
+		{% else %}
+		<a href="{{ resource.link }}" alt="{{ resource.title }}"><div class="content-tile large-6 small-12 columns">
+			<h4>{{ resource.title }}</h4>
+			<a href="{{ resource.link }}">{{ resource.link }}</a>
+			<p>{{ resource.description}}<p>
+		</div></a>
+		{% endif %}
+	{% endfor %}
+
+
+</div>
+{% endblock %}
