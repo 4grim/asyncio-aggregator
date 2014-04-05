@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'content_submit',
     'south',
     'storages',
+    'gunicorn',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -117,6 +118,9 @@ AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME', '')
 
 ADMIN = (('Amber', 'amber.grimaldi@gmail.com'),)
 
+LOGGING = {
+	'version': 1
+}
 
 # try to load local_settings.py if it exists
 try:
