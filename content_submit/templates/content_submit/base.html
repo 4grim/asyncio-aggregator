@@ -1,9 +1,9 @@
 {% load staticfiles %}
-
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html lang="en">
+<html xml:lang="en" lang="en">
 <head>
-	<meta charset="utf-8" />
+	<meta http-equiv="content-type" content="text/html"charset="utf-8" />
 
 	<title>Asyncio</title>
 
@@ -13,6 +13,29 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+
+	<script type="text/javascript" 
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	  <script type="text/javascript">
+	  /*<![CDATA[*/
+	  jQuery(function() {
+	      var form = jQuery("#submission_form");
+	      form.submit(function(e) {
+	          jQuery("#submitbutton").attr('disabled', true)
+	          jQuery("#submitwrapper").prepend('<span>Sending message, please wait... </span>')
+	          jQuery("#ajaxwrapper").load(
+	              form.attr('action') + ' #ajaxwrapper',
+	              form.serializeArray(),
+	              function(responseText, responseStatus) {
+	                  jQuery("#submitbutton").attr('disabled', false)
+	              }
+	          );
+	          e.preventDefault(); 
+	      });
+	  });
+	  /*]]>*/
+	  </script>
  
 	{% block header_block %}
 	{% endblock %}
@@ -71,15 +94,17 @@
 	<div id="submit-source" class="reveal-modal" data-reveal> 
 
 		<h5>Please complete the form below to submit your resource to be included.</h5>
-		<form action='' method="post">
-			<label>Name:</label><input type="text" name="name">
-			<label>Email:</label><input type="email" name="email">
-			<label>Link:</label><input type="url" name="link">
-			<label>Description:</label><textarea rows="4" cols="50"></textarea>
+		<form action='' method="post" name="submission_form">
+			{% csrf_token %}
+			<div id="ajaxwrapper">
+				<label>Name:</label><input type="text" name="name">
+				<label>Email:</label><input type="email" name="email">
+				<label>Link:</label><input type="url" name="link">
+				<label>Description:</label><textarea name="description" rows="4" cols="50"></textarea>
 			
-			<input type="submit" value="Submit">
+				<p id="submitwrapper"><input type="submit" value="Submit" id="submitbutton"></p>
+			</div>
 		</form>
-
 
 		<a class="close-reveal-modal">&#215;</a> 
 	</div>
