@@ -65,6 +65,7 @@ nav a {
 	box-shadow: 0px .5px .5px .5px #ccc;
 	margin-bottom: 3rem;
 	margin-top: 0rem;
+	text-align: justify;
 }
 
 .main-content > div {
@@ -177,19 +178,24 @@ dl.small dd {
 	font-family: 'Lato', sans-serif;
 }
 
-.content-tile {
+.box {
+	display: inline-block;
 	width: 23rem;
+	background-color: #f6f6f6;
+	box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.15);
+	font-family: 'Lato', sans-serif;
+	position: relative;
 	border-style: solid;
 	border-color: #ccc;
 	border-width: .1rem;
-	margin-top: 1.5rem;
-	padding: 1rem;
-	font-family: 'Lato', sans-serif;
-	position: relative;
-	float: left;
-	box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.15);
-	background-color: #f6f6f6;
+	margin-left: 0.25rem;
+	margin-right: 0.25rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
 
+.content-tile {
+	padding: 1rem;
 }
 
 .content-tile h4 {
@@ -210,17 +216,7 @@ dl.small dd {
 }
 
 .content-tile-image {
-	width: 23rem;
-	border-style: solid;
-	border-color: #ccc;
-	border-width: .1rem;
-	margin: 1.5rem .5rem .5rem .5rem;
 	padding: 0rem;
-	font-family: 'Lato', sans-serif;
-	float: left;
-	box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.15);
-	background-color: #f6f6f6;
-
 }
 
 .content-tile-image > .image {
