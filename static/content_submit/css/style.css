@@ -8,15 +8,20 @@ html, body {
 .main {
 	background-color: #f0f4f6;
 }
-
+/* -----------------------HERO SECTION ---------------------------------- */
+.main-head {
+	background-color: #2d3438;
+	height: 300px;
+	position: relative;
+	text-align: center;
+}
 nav {
 	background-color: #2d3438;
-	padding-top: .5rem;
-	padding-bottom: .5rem;
 	color: #bfd1d9;
 	font-family: 'Montserrat', sans-serif;
+	padding-top: 17px;
+	padding-bottom: 17px;
 }
-
 nav a {
 	color: #bfd1d9;
 	font-weight: 200;
@@ -25,24 +30,16 @@ nav a {
 	font-family: 'Montserrat', sans-serif;
 	font-size: normal;
 }
-
-.main-head {
-	background-color: #2d3438;
-	height: 250px;
-	position: relative;
+nav a:hover, nav a:active {
+	text-decoration: none;
 }
-.main-head > div {
-	padding-top: .5rem;
-}
-
 .main-head h1 {
-	text-align: center;
 	color: #a6b7bf;
 	margin: 0rem;
-	padding-top: 35px;
 	font-family: 'Montserrat', sans-serif;
+	vertical-align: center;
+	padding-top: 3rem;
 }
-
 .main-head p.small {
 	color: #79909a;
 	margin: 0rem;
@@ -50,7 +47,6 @@ nav a {
 	padding-bottom: 20px;
 	font-family: 'Montserrat', sans-serif;
 }
-
 .main-head p.medium {
 	color: #79909a;
 	margin: 0rem;
@@ -59,7 +55,6 @@ nav a {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 18px;
 }
-
 .main-head p.large {
 	color: #79909a;
 	margin: 0rem;
@@ -67,48 +62,31 @@ nav a {
 	padding-bottom: 36px;
 	font-family: 'Montserrat', sans-serif;
 }
-
-
 .main-head a {
 	color: #bfd1d9;
 	text-decoration: underline;
 	font-family: 'Montserrat', sans-serif;
 }
-
-.main-content {
-	background-color: #fff;
-	border-width: 1px;
-	border-style: solid;
-	border-right-color: #dfe8ec;
-	border-left-color: #dfe8ec;
-	border-bottom-color: #dfe8ec;
-	border-top: none;
-	box-shadow: 0px .5px .5px .5px #ccc;
-	margin-bottom: 3rem;
-	margin-top: 0rem;
-	text-align: justify;
-}
-
-.main-content > div {
-	margin-top: 3rem;
-}
-
+/* ------------------------- CONTENT NAVIGATION ------------------- */
 .resource-nav {
 	background-color: #f0f4f6;
 	border-width: 1px;
 	border-style: solid;
 	border-top-color: #dfe8ec;
-	border-right-color: #dfe8ec;
-	border-left-color: #dfe8ec;
+	border-right-color: #fff;
+	border-left-color: #fff;
 	border-bottom: none;
 	padding: 0rem;
-	width: 100%;
 	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	max-width: 1000px;
 }
 
 dl.large {
 	margin: 0rem;
 	font-family: 'Lato', sans-serif;
+
 }
 
 dl.medium {
@@ -122,25 +100,23 @@ dl.small {
 	margin: 0rem;
 	font-family: 'Lato', sans-serif;
 }
-
-
-dl.medium > dd.active {
-	background-color: #fff;
-}
-
-dl.small > dd.active {
-	background-color: #fff;
-}
-
 dl.large > dd.active {
 	background-color: #fff;
 }
 
+dl.medium > dd.active {
+	background-color: #fff;
+}
+dl.small > dd.active {
+	background-color: #fff;
+}
 .sub-nav {
 	padding-top: 0px;
 	margin-bottom: 0px;
 	padding-bottom: 0rem;
-
+	margin-left: 0px;
+	margin-right: 0px;
+	text-align: center;
 }
 .sub-nav dd:first-child {
 	border-left: none;
@@ -155,7 +131,7 @@ dl.large > dd.active {
 	margin: 0rem;
 	font-family: 'Lato', sans-serif;
 	font-weight: normal;
-
+	font-size: 1rem;
 }
 
 dl.large dd {
@@ -168,8 +144,8 @@ dl.large dd {
 	background-color: #f0f4f6;
 	font-size: 1.5rem;
 	color: #717e84;
-	width: 20%;
 	text-align: center;
+	width: 20%;
 }
 
 dl.medium dd {
@@ -199,9 +175,27 @@ dl.small dd {
 	text-align: center;
 }
 
+/* ------------------------- CONTENT SECTION --------------------- */
+.main-content {
+	background-color: #fff;
+	border-width: 1px;
+	border-style: solid;
+	border-right-color: #dfe8ec;
+	border-left-color: #dfe8ec;
+	border-bottom-color: #dfe8ec;
+	border-top: none;
+	box-shadow: 0px .5px .5px .5px #ccc;
+	margin-bottom: 3rem;
+	margin-top: 0rem;
+	text-align: center;
+	width: 100%;
+	max-width: 1000px;
+}
+
 .resource-type-title {
 	clear: both;
 	font-family: 'Lato', sans-serif;
+	text-align: left;
 }
 
 .box {

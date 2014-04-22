@@ -41,53 +41,49 @@
 	{% endblock %}
 </head>
 <body>
-	<nav>
-		<a data-reveal-id="submit-source" href="#">Submit a Link</a> &middot;
-		<a href="mailto:amber.grimaldi@gmail.com?subject=Hi There!">Contact</a> &middot;
-		<a href="https://github.com/4grim/asyncio-aggregator">Github</a>
-	</nav>
-	<div class="main-head text-center">
+	<div class="main-head">
+		<nav>
+			<a data-reveal-id="submit-source" href="#">Submit a Link</a> &middot;
+			<a href="mailto:amber.grimaldi@gmail.com?subject=Hi There!">Contact</a> &middot;
+			<a href="https://github.com/4grim/asyncio-aggregator">Github</a>
+		</nav>
 		<div>
 			<h1>Python Async IO Resources</h1>
 		</div>
 		<div>
-			<p class="small show-for-small-only">Curated content from around the net to get started with <a href="https://docs.python.org/3.4/library/asyncio.html">asyncio</a></p>
-			<p class="medium show-for-medium-only">Curated content to get started with <a href="https://docs.python.org/3.4/library/asyncio.html">asyncio</a></p>
-			<p class="large show-for-large-up">Curated content from around the net to get started with <a href="https://docs.python.org/3.4/library/asyncio.html">asyncio</a></p>
+			<p class="subheader small show-for-small-only">Curated content from around the net to get started with <a href="https://docs.python.org/3.4/library/asyncio.html">asyncio</a></p>
+			<p class="subheader medium show-for-medium-only">Curated content to get started with <a href="https://docs.python.org/3.4/library/asyncio.html">asyncio</a></p>
+			<p class="subheader large show-for-large-up">Curated content from around the net to get started with <a href="https://docs.python.org/3.4/library/asyncio.html">asyncio</a></p>
 		</div>
-		<div class="row">
-			<div data-magellan-expedition="fixed" class="resource-nav text-center">
-				<dl class="sub-nav large show-for-large-up">
-					<dd data-magellan-arrival="libraries"><a href="#libraries">Libraries</a></dd>
-					<dd data-magellan-arrival="docs"><a href="#docs">Docs</a></dd>
-					<dd data-magellan-arrival="talks"><a href="#talks">Talks</a></dd>
-					<dd data-magellan-arrival="tutorials"><a href="#tutorials">Tutorials</a></dd>
-					<dd data-magellan-arrival="blogs"><a href="#blogs">Blogs</a></dd>
-				</dl>
 
-				<dl class="sub-nav medium show-for-medium-only">
-					<dd data-magellan-arrival="libraries"><a href="#libraries">Libraries</a></dd>
-					<dd data-magellan-arrival="docs"><a href="#docs">Docs</a></dd>
-					<dd data-magellan-arrival="talks"><a href="#talks">Talks</a></dd>
-					<dd data-magellan-arrival="tutorials"><a href="#tutorials">Tutorials</a></dd>
-					<dd data-magellan-arrival="blogs"><a href="#blogs">Blogs</a></dd>
-				</dl>
+		<div data-magellan-expedition="fixed" class="resource-nav">
+			<dl class="sub-nav large show-for-large-up">
+				<dd data-magellan-arrival="libraries"><a href="#libraries">Libraries</a></dd>
+				<dd data-magellan-arrival="docs"><a href="#docs">Docs</a></dd>
+				<dd data-magellan-arrival="talks"><a href="#talks">Talks</a></dd>
+				<dd data-magellan-arrival="tutorials"><a href="#tutorials">Tutorials</a></dd>
+				<dd data-magellan-arrival="blogs"><a href="#blogs">Blogs</a></dd>
+			</dl>
 
+			<dl class="sub-nav medium show-for-medium-only">
+				<dd data-magellan-arrival="libraries"><a href="#libraries">Libraries</a></dd>
+				<dd data-magellan-arrival="docs"><a href="#docs">Docs</a></dd>
+				<dd data-magellan-arrival="talks"><a href="#talks">Talks</a></dd>
+				<dd data-magellan-arrival="tutorials"><a href="#tutorials">Tutorials</a></dd>
+				<dd data-magellan-arrival="blogs"><a href="#blogs">Blogs</a></dd>
+			</dl>
 
-				<dl class="sub-nav small show-for-small-only">
-					<dd data-magellan-arrival="libraries"><a href="#libraries">Libraries</a></dd>
-					<dd data-magellan-arrival="docs"><a href="#docs">Docs</a></dd>
-					<dd data-magellan-arrival="talks"><a href="#talks">Talks</a></dd>
-					<dd data-magellan-arrival="tutorials"><a href="#tutorials">Tutorials</a></dd>
-					<dd data-magellan-arrival="blogs"><a href="#blogs">Blogs</a></dd>
-				</dl>
-
-			</div>
+			<dl class="sub-nav small show-for-small-only">
+				<dd data-magellan-arrival="libraries"><a href="#libraries">Libraries</a></dd>
+				<dd data-magellan-arrival="docs"><a href="#docs">Docs</a></dd>
+				<dd data-magellan-arrival="talks"><a href="#talks">Talks</a></dd>
+				<dd data-magellan-arrival="tutorials"><a href="#tutorials">Tutorials</a></dd>
+				<dd data-magellan-arrival="blogs"><a href="#blogs">Blogs</a></dd>
+			</dl>
 		</div>
 	</div>
 
 	<div class="row main-content">
-
 		{% block body_block %}
 		{% endblock %}
 	</div>
