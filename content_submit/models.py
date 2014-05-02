@@ -15,9 +15,11 @@ class Resource(models.Model):
 	)
 	title = models.CharField(max_length=220)
 	link = models.URLField(max_length=200)
+	author = models.CharField(blank=True)
 	description = models.TextField()
 	image = models.ImageField(upload_to='content_submit', blank=True)
 	category = models.CharField(max_length=220, choices=CATEGORY_CHOICES, default=None)
+	publish_date = models.DateField() 
 
 	def __unicode__(self):
 		return self.title
