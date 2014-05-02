@@ -46,6 +46,7 @@ nav a:hover, nav a:active {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	font-family: 'Montserrat', sans-serif;
+	text-align: center;
 }
 .main-head p.medium {
 	color: #79909a;
@@ -54,6 +55,7 @@ nav a:hover, nav a:active {
 	padding-bottom: 34px;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 18px;
+	text-align: center;
 }
 .main-head p.large {
 	color: #79909a;
@@ -61,6 +63,7 @@ nav a:hover, nav a:active {
 	padding-top: 30px;
 	padding-bottom: 36px;
 	font-family: 'Montserrat', sans-serif;
+	text-align: center;
 }
 .main-head a {
 	color: #bfd1d9;
