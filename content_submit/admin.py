@@ -7,6 +7,11 @@ from content_submit.models import Resource
 class ResourceAdmin(admin.ModelAdmin):
 	date_hierarchy = 'publish_date'
 
-	list_display = ('title', 'category', 'publish_date')
+	list_display = ('title', 'author', 'category', 'publish_date',)
+
+	list_filter = ('category',)
+
+	search_fields = ('title', 'author', )
+
 
 admin.site.register(Resource, ResourceAdmin)
