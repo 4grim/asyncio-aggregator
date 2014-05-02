@@ -15,7 +15,7 @@ class Resource(models.Model):
 	)
 	title = models.CharField(max_length=220)
 	link = models.URLField(max_length=200)
-	author = models.CharField(blank=True)
+	author = models.CharField(blank=True, max_length=200)
 	description = models.TextField()
 	image = models.ImageField(upload_to='content_submit', blank=True)
 	category = models.CharField(max_length=220, choices=CATEGORY_CHOICES, default=None)
