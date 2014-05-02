@@ -23,7 +23,7 @@
 	      var form = jQuery("#submission_form");
 	      form.submit(function(e) {
 	          jQuery("#submitbutton").attr('disabled', true)
-	          jQuery("#submitwrapper").prepend('<span>Sending message, please wait... </span>')
+	          jQuery("#submitwrapper").prepend('Sending message, please wait...')
 	          jQuery("#ajaxwrapper").load(
 	              form.attr('action') + ' #ajaxwrapper',
 	              form.serializeArray(),
@@ -55,7 +55,9 @@
 			<p class="subheader medium show-for-medium-only">Curated content to get started with <a href="https://docs.python.org/3.4/library/asyncio.html">asyncio</a></p>
 			<p class="subheader large show-for-large-up">Curated content from around the net to get started with <a href="https://docs.python.org/3.4/library/asyncio.html">asyncio</a></p>
 		</div>
+	</div>
 
+	<div class="row main-content">
 		<div data-magellan-expedition="fixed" class="resource-nav">
 			<dl class="sub-nav large show-for-large-up">
 				<dd data-magellan-arrival="libraries"><a href="#libraries">Libraries</a></dd>
@@ -81,9 +83,6 @@
 				<dd data-magellan-arrival="blogs"><a href="#blogs">Blogs</a></dd>
 			</dl>
 		</div>
-	</div>
-
-	<div class="row main-content">
 		{% block body_block %}
 		{% endblock %}
 	</div>
@@ -112,9 +111,11 @@
     <!-- below imports all js libraries, can edit with only the essentials if needed and too slow -->
     <script src="{% static 'content_submit/js/foundation.min.js' %}"></script>
     <script src="{% static 'content_submit/js/foundation/foundation.equalizer.js' %}"></script>
+
     <!-- <script src="{% static 'projects/js/foundation.magellan.js' %}"></script> -->
     <script>
         $(document).foundation();
     </script>
+
 </body>
 </html>

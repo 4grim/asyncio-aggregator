@@ -67,113 +67,6 @@ nav a:hover, nav a:active {
 	text-decoration: underline;
 	font-family: 'Montserrat', sans-serif;
 }
-/* ------------------------- CONTENT NAVIGATION ------------------- */
-.resource-nav {
-	background-color: #f0f4f6;
-	border-width: 1px;
-	border-style: solid;
-	border-top-color: #dfe8ec;
-	border-right-color: #fff;
-	border-left-color: #fff;
-	border-bottom: none;
-	padding: 0rem;
-	margin-top: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
-	max-width: 1000px;
-}
-
-dl.large {
-	margin: 0rem;
-	font-family: 'Lato', sans-serif;
-
-}
-
-dl.medium {
-	margin-top: 0rem;
-	margin-left: 0rem;
-	margin-right: 0rem;
-	font-family: 'Lato', sans-serif;
-}
-
-dl.small {
-	margin: 0rem;
-	font-family: 'Lato', sans-serif;
-}
-dl.large > dd.active {
-	background-color: #fff;
-}
-
-dl.medium > dd.active {
-	background-color: #fff;
-}
-dl.small > dd.active {
-	background-color: #fff;
-}
-.sub-nav {
-	padding-top: 0px;
-	margin-bottom: 0px;
-	padding-bottom: 0rem;
-	margin-left: 0px;
-	margin-right: 0px;
-	text-align: center;
-}
-.sub-nav dd:first-child {
-	border-left: none;
-	font-family: 'Lato', sans-serif;
-}
-
-.sub-nav dd.active a {
-	background-color: #fff;
-	color: #717e84;
-	border-radius: 0px;
-	padding-left: 0rem;
-	margin: 0rem;
-	font-family: 'Lato', sans-serif;
-	font-weight: normal;
-	font-size: 1rem;
-}
-
-dl.large dd {
-	border-left-style: solid;
-	border-left-width: 1px;
-	border-left-color: #fff;
-	padding-left: 1em;
-	padding-right: 1em;
-	margin: 0rem;
-	background-color: #f0f4f6;
-	font-size: 1.5rem;
-	color: #717e84;
-	text-align: center;
-	width: 20%;
-}
-
-dl.medium dd {
-	border-left-style: solid;
-	border-left-width: 1px;
-	border-left-color: #fff;
-	padding-top: .2rem;
-	padding-bottom: .2rem;
-	margin: 0rem;
-	background-color: #f0f4f6;
-	font-size: 1.25rem;
-	color: #717e84;
-	width: 20%;
-	text-align: center;
-}
-
-dl.small dd {
-	border-left-style: solid;
-	border-left-width: 1px;
-	border-left-color: #fff;
-	padding: 0rem;
-	margin: 0rem;
-	background-color: #f0f4f6;
-	font-size: .75rem;
-	color: #717e84;
-	width: 20%;
-	text-align: center;
-}
 
 /* ------------------------- CONTENT SECTION --------------------- */
 .main-content {
@@ -263,5 +156,113 @@ dl.small dd {
 
 .content-tile-image:active {
 	background-color: #222729;
+}
+
+/* ------------------------- CONTENT NAVIGATION ------------------- */
+.resource-nav {
+	background-color: #f0f4f6;
+	border-width: 1px;
+	border-style: solid;
+	border-top-color: #dfe8ec;
+	border-right-color: #fff;
+	border-left-color: #fff;
+	border-bottom-color: #dfe8ec;
+	padding: 0rem;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	position: relative;
+}
+
+dl.large {
+	margin: 0rem;
+	font-family: 'Lato', sans-serif;
+}
+
+dl.medium {
+	margin-top: 0rem;
+	margin-left: 0rem;
+	margin-right: 0rem;
+	font-family: 'Lato', sans-serif;
+}
+
+dl.small {
+	margin: 0rem;
+	font-family: 'Lato', sans-serif;
+}
+dl.large > dd.active {
+	background-color: #fff;
+}
+
+dl.medium > dd.active {
+	background-color: #fff;
+}
+dl.small > dd.active {
+	background-color: #fff;
+}
+.sub-nav {
+	padding-top: 0px;
+	margin-bottom: 0px;
+	padding-bottom: 0rem;
+	margin-left: 0px;
+	margin-right: 0px;
+	text-align: center;
+}
+.sub-nav dd:first-child {
+	border-left: none;
+	font-family: 'Lato', sans-serif;
+}
+
+.sub-nav dd.active a {
+	background-color: #fff;
+	color: #717e84;
+	border-radius: 0px;
+	padding-left: 0rem;
+	margin: 0rem;
+	font-family: 'Lato', sans-serif;
+	font-weight: normal;
+	font-size: 1rem;
+}
+
+dl.large dd {
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-left-color: #fff;
+	padding-left: 1em;
+	padding-right: 1em;
+	margin: 0rem;
+	background-color: #f0f4f6;
+	font-size: 1.5rem;
+	color: #717e84;
+	text-align: center;
+	width: 20%;
+}
+
+dl.medium dd {
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-left-color: #fff;
+	padding-top: .2rem;
+	padding-bottom: .2rem;
+	margin: 0rem;
+	background-color: #f0f4f6;
+	font-size: 1.25rem;
+	color: #717e84;
+	width: 20%;
+	text-align: center;
+}
+
+dl.small dd {
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-left-color: #fff;
+	padding: 0rem;
+	margin: 0rem;
+	background-color: #f0f4f6;
+	font-size: .75rem;
+	color: #717e84;
+	width: 20%;
+	text-align: center;
 }
 
