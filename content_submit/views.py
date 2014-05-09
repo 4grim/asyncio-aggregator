@@ -19,8 +19,8 @@ def home_page(request):
 		form = request.POST
 		send_mail(
 			'Asyncio Submission', 
-			'%s %s %s' % (name, email, description), 
-			'link', 
+			'%s %s %s %s' % (name, email, link, description), 
+			'amber.grimaldi@gmail.com', 
 			['amber.grimaldi@gmail.com']
 		)
 		if request.is_ajax():
