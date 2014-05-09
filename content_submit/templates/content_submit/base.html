@@ -14,27 +14,26 @@
 	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
 
-	<script type="text/javascript" 
-    src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-	  <script type="text/javascript">
-	  /*<![CDATA[*/
-	  jQuery(function() {
-	      var form = jQuery("#submission_form");
-	      form.submit(function(e) {
-	          jQuery("#submitbutton").attr('disabled', true)
-	          jQuery("#submitwrapper").prepend('Sending message, please wait...')
-	          jQuery("#ajaxwrapper").load(
-	              form.attr('action') + ' #ajaxwrapper',
-	              form.serializeArray(),
-	              function(responseText, responseStatus) {
-	                  jQuery("#submitbutton").attr('disabled', false)
-	              }
-	          );
-	          e.preventDefault(); 
-	      });
-	  });
-	  /*]]>*/
-	  </script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  /*<![CDATA[*/
+  jQuery(function() {
+      var form = jQuery("#submission_form");
+      form.submit(function(e) {
+          jQuery("#submitbutton").attr('disabled', true)
+          jQuery("#submitwrapper").prepend('Sending message, please wait...')
+          jQuery("#ajaxwrapper").load(
+              form.attr('action') + ' #ajaxwrapper',
+              form.serializeArray(),
+              function(responseText, responseStatus) {
+                  jQuery("#submitbutton").attr('disabled', false)
+              }
+          );
+          e.preventDefault(); 
+      });
+  });
+  /*]]>*/
+  </script>
  
 	{% block header_block %}
 	{% endblock %}
@@ -107,14 +106,10 @@
 	</div>
 
 	<script src="{% static 'content_submit/js/vendor/jquery.js' %}"></script>
-    <!-- below imports all js libraries, can edit with only the essentials if needed and too slow -->
-    <script src="{% static 'content_submit/js/foundation.min.js' %}"></script>
-    <script src="{% static 'content_submit/js/foundation/foundation.equalizer.js' %}"></script>
-
-    <!-- <script src="{% static 'projects/js/foundation.magellan.js' %}"></script> -->
-    <script>
-        $(document).foundation();
-    </script>
+  <script src="{% static 'content_submit/js/foundation.min.js' %}"></script>
+  <script>
+      $(document).foundation();
+  </script>
 
 </body>
 </html>
