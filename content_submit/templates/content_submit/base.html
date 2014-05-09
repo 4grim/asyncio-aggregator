@@ -1,7 +1,6 @@
 {% load staticfiles %}
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xml:lang="en" lang="en">
+<html lang="en">
 <head>
 	<meta http-equiv="content-type" content="text/html"charset="utf-8" />
 	<link rel="shortcut icon" type="image/png" href="{% static 'content_submit/img/opensource.png' %}">
@@ -13,7 +12,6 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-
 
 	<script type="text/javascript" 
     src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
@@ -69,8 +67,7 @@
 			<p class="subheader large show-for-large-up">Curated content from around the net to get started with <a href="https://docs.python.org/3.4/library/asyncio.html">asyncio</a></p>
 		</div>
 	</div>
-
-	<div class="row main-content">
+	<div class="main-nav">
 		<div data-magellan-expedition="fixed" class="resource-nav">
 			<dl class="sub-nav large show-for-large-up">
 				<dd data-magellan-arrival="libraries"><a href="#libraries">Libraries</a></dd>
@@ -96,6 +93,9 @@
 				<dd data-magellan-arrival="blogs"><a href="#blogs">Blogs</a></dd>
 			</dl>
 		</div>
+	</div>
+
+	<div class="row main-content">
 		{% block body_block %}
 		{% endblock %}
 	</div>
@@ -121,14 +121,10 @@
 	</div>
 
 	<script src="{% static 'content_submit/js/vendor/jquery.js' %}"></script>
-    <!-- below imports all js libraries, can edit with only the essentials if needed and too slow -->
-    <script src="{% static 'content_submit/js/foundation.min.js' %}"></script>
-    <script src="{% static 'content_submit/js/foundation/foundation.equalizer.js' %}"></script>
-
-    <!-- <script src="{% static 'projects/js/foundation.magellan.js' %}"></script> -->
-    <script>
-        $(document).foundation();
-    </script>
+  <script src="{% static 'content_submit/js/foundation.min.js' %}"></script>
+  <script>
+      $(document).foundation();
+  </script>
 
 
 </body>

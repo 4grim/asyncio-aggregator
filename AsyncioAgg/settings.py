@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'south',
     'storages',
     'gunicorn',
+    'markdown_deux'
 )
 
 MIDDLEWARE_CLASSES = (
