@@ -269,3 +269,6 @@ dl.small dd {
 	text-align: center;
 }
 
+[data-magellan-expedition] {
+	left: 0;
+}
