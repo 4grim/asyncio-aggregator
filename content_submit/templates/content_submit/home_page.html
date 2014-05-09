@@ -5,41 +5,36 @@
 {% block body_block %}
 <div class="content-data">	
 
-	<a name="libraries"></a>
 	<h3 data-magellan-destination="libraries" class="resource-type-title">Libraries</h3>
-	<div class="rsrc-columns">
+	<div class="rsrc-columns" id="libraries">
 		{% for resource in library_resources %}
 			{% include 'content_submit/_resource.html' %}
 		{% endfor %}
 	</div>
 
-	<a name="docs"></a>
 	<h3 data-magellan-destination="docs" class="resource-type-title">Docs</h3>
-	<div class="rsrc-columns">
+	<div class="rsrc-columns" id="docs">
 		{% for resource in doc_resources %}
 			{% include 'content_submit/_resource.html' %}
 		{% endfor %}
 	</div>
 
-	<a name="talks"></a>
 	<h3 data-magellan-destination="talks" class="resource-type-title">Talks</h3>
-	<div class="rsrc-columns">
+	<div class="rsrc-columns" id="talks">
 		{% for resource in talk_resources %}
 			{% include 'content_submit/_resource.html' %}
 		{% endfor %}
 	</div>
 
-	<a name="tutorials"></a>
 	<h3 data-magellan-destination="tutorials" class="resource-type-title">Tutorials</h3>
-	<div class="rsrc-columns">
+	<div class="rsrc-columns" id="tutorials">
 		{% for resource in tutorial_resources %}
 			{% include 'content_submit/_resource.html' %}
 		{% endfor %}
 	</div>
 
-	<a name="blogs"></a>
 	<h3 data-magellan-destination="blogs" class="resource-type-title">Blog Posts</h3>
-	<div class="rsrc-columns">
+	<div class="rsrc-columns" id="blogs">
 		{% for resource in blog_resources %}
 			{% include 'content_submit/_resource.html' %}
 		{% endfor %}
