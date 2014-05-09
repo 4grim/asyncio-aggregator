@@ -142,13 +142,14 @@ nav a:hover, nav a:active {
 	font-family: 'Lato', sans-serif;
 	border-style: solid;
 	border-color: #ccc;
-	border-width: .1rem;
+	border-width: 1px;
 	margin-right: 1rem;
 	margin-top: 0.5rem;
-	margin-bottom: 0.5rem;
+	margin-bottom: 1rem;
 	width: 100%;
 	clear:both;
 	overflow: auto;
+	padding: 1rem;
 }
 
 .box .link {
@@ -160,7 +161,7 @@ nav a:hover, nav a:active {
 	width: 25%;
 	height: auto;
 	float: left;
-	margin: 1rem;
+	margin-right: 1rem;
 }
 
 /*.content-tile {
