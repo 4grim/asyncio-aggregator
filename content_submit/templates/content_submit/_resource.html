@@ -1,18 +1,16 @@
 {% load markdown_deux_tags %}
 
 {% if resource.image %}
-<a href="{{ resource.link }}" alt="{{ resource.title }}"><div class="content-tile-image box large-6 small-12 columns">
+<a href="{{ resource.link }}" alt="{{ resource.title }}" class="content-tile-image box">
   <img src="{{ resource.image.url }}" class="image"/>
-  <div class="content">
-    <h4>{{ resource.title }}</h4>
-    <a href="{{ resource.link }}">{{ resource.link|truncatechars:35 }}</a>
-    <p>{{ resource.description|markdown }}<p>
-  </div>
-</div></a>
-{% else %}
-<a href="{{ resource.link }}" alt="{{ resource.title }}"><div class="content-tile box large-6 small-12 columns">
   <h4>{{ resource.title }}</h4>
-  <a href="{{ resource.link }}">{{ resource.link|truncatechars:35 }}</a>
-  <p>{{ resource.description|markdown }}<p>
-</div></a>
+  <p class="link">{{ resource.link|truncatechars:35 }}</p>
+  <p>{{ resource.description|markdown }}</p>
+</a>
+{% else %}
+<a href="{{ resource.link }}" alt="{{ resource.title }}" class="content-tile box">
+  <h4>{{ resource.title }}</h4>
+  <p class="link">{{ resource.link|truncatechars:35 }}</p>
+  <p>{{ resource.description|markdown }}</p>
+</a>
 {% endif %}
