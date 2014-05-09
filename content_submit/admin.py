@@ -7,7 +7,7 @@ from content_submit.models import Resource
 class ResourceAdmin(admin.ModelAdmin):
 	date_hierarchy = 'publish_date'
 
-	list_display = ('title', 'author', 'category', 'publish_date',)
+	list_display = ('title', 'author', 'category', 'publish_date', 'active')
 
 	list_filter = ('category',)
 

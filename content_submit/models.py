@@ -19,7 +19,7 @@ class Resource(models.Model):
 	description = models.TextField()
 	image = models.ImageField(upload_to='content_submit', blank=True)
 	category = models.CharField(max_length=220, choices=CATEGORY_CHOICES, default=None)
-	publish_date = models.DateField(blank=True)
+	publish_date = models.DateField(blank=True, null=True)
 	active = models.BooleanField(default=False)
 
 	def __unicode__(self):
