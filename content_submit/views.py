@@ -1,14 +1,16 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
-from content_submit.models import Resource
+from content_submit.models import Resource, Submission
 
 # Create your views here.
 def home_page(request):
+
 	library_resources = Resource.objects.filter(category='Library')
 	doc_resources = Resource.objects.filter(category='Documentation')
 	talk_resources = Resource.objects.filter(category='Talk')
 	tutorial_resources = Resource.objects.filter(category='Tutorial')
 	blog_resources = Resource.objects.filter(category='Blog')
+	
 	form = request.POST
 	link = form.get('link', default=None)
 	name = form.get('name', default=None)
@@ -17,6 +19,12 @@ def home_page(request):
 
 	if request.POST:
 		form = request.POST
+
+		#save submission to DB
+		new_resource = Submission(link=link, name=name, description=description, email=email)
+		new_resource.save()
+
+		#send submission to email
 		send_mail(
 			'Asyncio Submission', 
 			'%s %s %s %s' % (name, email, link, description), 

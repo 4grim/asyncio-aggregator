@@ -13,8 +13,8 @@ class Resource(models.Model):
 		(TUTORIAL, 'Tutorial'),
 		(BLOG, 'Blog'),
 	)
-	title = models.CharField(max_length=220)
-	link = models.URLField(max_length=200)
+	title = models.CharField(max_length=254)
+	link = models.URLField(max_length=254)
 	author = models.CharField(blank=True, max_length=200)
 	description = models.TextField()
 	image = models.ImageField(upload_to='content_submit', blank=True)
@@ -24,4 +24,14 @@ class Resource(models.Model):
 
 	def __unicode__(self):
 		return self.title
+
+
+class Submission(models.Model):
+	link = models.URLField(max_length=254)
+	description = models.TextField()
+	name = models.CharField(max_length=200)
+	email = models.EmailField(max_length=254)
+
+	def __unicode__(self):
+		return self.name
 
