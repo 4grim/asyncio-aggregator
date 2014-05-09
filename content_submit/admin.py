@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from content_submit.models import Resource
+from content_submit.models import Resource, Submission
 
 # Register your models here.
 
@@ -13,5 +13,9 @@ class ResourceAdmin(admin.ModelAdmin):
 
 	search_fields = ('title', 'author', )
 
+class SubmissionAdmin(admin.ModelAdmin):
+	list_display = ('name', 'email', 'link' )
+
 
 admin.site.register(Resource, ResourceAdmin)
+admin.site.register(Submission, SubmissionAdmin)
