@@ -5,7 +5,7 @@
   <img src="{{ resource.image.url }}" class="image"/>
   <h4>{{ resource.title }}</h4>
   {% if resource.author and resource.publish_date %}
-  	<p>{{ resource.author }} - {{ resource.publish_date|date:"MjY" }}</p>
+  	<p>{{ resource.author }} - {{ resource.publish_date|date:"M j, Y" }}</p>
   {% elif resource.author %}
   	<p>{{ resource.author }}</p>
   {% elif resource.publish_date %}
@@ -19,7 +19,7 @@
 <a href="{{ resource.link }}" alt="{{ resource.title }}" class="content-tile box">
   <h4>{{ resource.title }}</h4>
   {% if resource.author and resource.publish_date %}
-  	<p>{{ resource.author }} - {{ resource.publish_date|date:"MjY" }}</p>
+  	<p>{{ resource.author }} - {{ resource.publish_date|date:"M j, Y" }}</p>
   {% elif resource.author %}
   	<p>{{ resource.author }}</p>
   {% elif resource.publish_date %}
