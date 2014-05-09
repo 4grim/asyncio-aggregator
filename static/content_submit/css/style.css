@@ -161,6 +161,14 @@ nav a:hover, nav a:active {
 	background-color: #222729;
 }
 
+.pub-date {
+	margin: 0px;
+}
+
+.author {
+	margin: 0px;
+}
+
 /* ------------------------- CONTENT NAVIGATION ------------------- */
 .resource-nav {
 	background-color: #f0f4f6;
